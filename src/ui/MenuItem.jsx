@@ -14,16 +14,3 @@ const MenuItem = ({ label, path, onClick }) => {
 };
 
 export default MenuItem;
-
-// import React from "react";
-// import { NavLink } from "react-router-dom";
-
-// const MenuItem = ({ itemName, onHover, onLeave }) => {
-//   return (
-//     <li onMouseEnter={onHover} onMouseLeave={onLeave}>
-//       <NavLink to="/about">{itemName}</NavLink>
-//     </li>
-//   );
-// };
-
-// export default NevItem;

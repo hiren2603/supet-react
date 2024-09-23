@@ -43,11 +43,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg font-catamaran text-primary">
+    <nav className="bg-white font-catamaran text-primary border-b-[1px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold">School Website</h1>
+            <h1 className="text-3xl font-bold text-shadow">Our Logo</h1>
           </div>
           <div className="flex items-center">
             <button
@@ -57,17 +57,17 @@ const Navbar = () => {
               ☰
             </button>
           </div>
-          <div className={`md:flex space-x-4 ${isOpen ? "block" : "hidden"}`}>
+          <div className={`md:flex gap-4 ${isOpen ? "block" : "hidden"}`}>
             <MenuItem label="Home" path="/" />
             <MenuItem label="About" path="/about" />
-            <div className="relative flex" ref={campusRef}>
+            <div className="relative flex px-4 py-2" ref={campusRef}>
               <button
                 onMouseEnter={toggleCampus}
                 className="hover:text-gray-700 transition duration-300"
               >
                 Campus
               </button>
-              <Submenu open={openCampus}>
+              <Submenu open={openCampus} close={closeSubmenus}>
                 <MenuItem label="School" path="/campus/school" />
                 <MenuItem label="Sports & Gym" path="/campus/sports-gym" />
                 <MenuItem label="Hostels" path="/campus/hostels" />

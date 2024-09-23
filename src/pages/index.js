@@ -7,6 +7,23 @@ import SportsGym from "./SportsGym/SportsGym";
 import Houses from "./Houses/Houses";
 import Recognition from "./RecognitionAwards/Recognition";
 import Health from "./Health/Health";
+import Announcement from "./Announcement/Announcement";
+import Initiatives from "./Initiatives/Initiatives";
+import Clubs from "./Clubs/Clubs";
+import Contact from "./Contact/Contact";
 
-
-export { Home, About, Hostels, School, Bhojanalaya, SportsGym, Houses, Recognition, Health }
+export {
+  Home,
+  About,
+  Hostels,
+  School,
+  Bhojanalaya,
+  SportsGym,
+  Houses,
+  Recognition,
+  Health,
+  Announcement,
+  Initiatives,
+  Clubs,
+  Contact,
+};

@@ -18,9 +18,11 @@ import {
   Houses,
   Recognition,
   Health,
+  Clubs,
+  Initiatives,
+  Announcement,
+  Contact,
 } from "@/pages";
-import Clubs from "./pages/Clubs/Clubs";
-import Initiatives from "./pages/Initiatives/Initiatives";
 
 const router = createBrowserRouter([
   {
@@ -58,7 +60,7 @@ const router = createBrowserRouter([
       {
         children: [
           {
-            path: "programs/houses",
+            path: "/programs/house-system",
             element: <Houses />,
           },
           {
@@ -82,6 +84,14 @@ const router = createBrowserRouter([
             element: <Initiatives />,
           },
         ],
+      },
+      {
+        path: "/announcement",
+        element: <Announcement />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

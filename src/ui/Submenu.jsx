@@ -1,12 +1,12 @@
 import React from "react";
 
-function Submenu({ children, open }) {
+function Submenu({ children, open, close }) {
   return (
     <div
       className={`absolute left-0 top-[130%] w-[400px] bg-primary text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
-        open ? "h-48" : "max-h-0"
+        open ? "h-max" : "max-h-0"
       }`}
-      onClick={open}
+      onClick={close}
     >
       <div className="flex flex-col justify-center">{children}</div>
     </div>
