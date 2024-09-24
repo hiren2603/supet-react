@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Recognition() {
-  return (
-    <div>Recognition</div>
-  )
+  return <div>Recognition & Awards</div>;
 }
 
-export default Recognition
+export default Recognition;

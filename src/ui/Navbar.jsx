@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import MenuItem from "./MenuItem";
 import Submenu from "./Submenu";
+import Logo from "@/assets/logo.png";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,30 +44,32 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white font-catamaran text-primary border-b-[1px]">
+    <nav className="font-medium pt-2 pb-2 border-b-[1px] border-primary shadow-md z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <h1 className="text-3xl font-bold text-shadow">Our Logo</h1>
+            <NavLink to="/">
+              <img className="h-16 w-16" src={Logo} alt="Logo" />
+            </NavLink>
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center text-primary">
             <button
               className="md:hidden text-xl focus:outline-none"
               onClick={toggleMenu}
             >
               ☰
             </button>
-          </div>
+          </div> */}
           <div className={`md:flex gap-4 ${isOpen ? "block" : "hidden"}`}>
             <MenuItem label="Home" path="/" />
             <MenuItem label="About" path="/about" />
-            <div className="relative flex px-4 py-2" ref={campusRef}>
-              <button
+            <div className="relative flex" ref={campusRef}>
+              <NavLink
                 onMouseEnter={toggleCampus}
-                className="hover:text-gray-700 transition duration-300"
+                className="px-4 py-2 border-b-[1px] border-white hover:border-b-[1px] hover:border-orange-600 hover:text-orange-600 transition-all duration-300"
               >
                 Campus
-              </button>
+              </NavLink>
               <Submenu open={openCampus} close={closeSubmenus}>
                 <MenuItem label="School" path="/campus/school" />
                 <MenuItem label="Sports & Gym" path="/campus/sports-gym" />
@@ -75,24 +78,24 @@ const Navbar = () => {
               </Submenu>
             </div>
             <div className="relative flex" ref={programsRef}>
-              <button
+              <NavLink
                 onMouseEnter={togglePrograms}
-                className="hover:text-gray-700 transition duration-300"
+                className="px-4 py-2 border-b-[1px] border-white hover:border-b-[1px] hover:border-orange-600 hover:text-orange-600 transition-all duration-300"
               >
                 Programs
-              </button>
+              </NavLink>
               <Submenu open={openPrograms}>
                 <MenuItem label="House System" path="/programs/house-system" />
                 <MenuItem label="Clubs" path="/programs/clubs" />
                 <MenuItem
                   label="Recognition & Awards"
-                  path="/programs/recognition"
+                  path="/programs/recognition-awards"
                 />
                 <MenuItem label="Health" path="/programs/health" />
                 <MenuItem label="Initiatives" path="/programs/initiatives" />
               </Submenu>
             </div>
-            <MenuItem label="Announcement" path="/announcement" />
+            <MenuItem label="News" path="/news" />
             <MenuItem label="Contact" path="/contact" />
           </div>
         </div>

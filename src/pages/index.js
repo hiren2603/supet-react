@@ -7,7 +7,7 @@ import SportsGym from "./SportsGym/SportsGym";
 import Houses from "./Houses/Houses";
 import Recognition from "./RecognitionAwards/Recognition";
 import Health from "./Health/Health";
-import Announcement from "./Announcement/Announcement";
+import News from "./News/News";
 import Initiatives from "./Initiatives/Initiatives";
 import Clubs from "./Clubs/Clubs";
 import Contact from "./Contact/Contact";
@@ -22,7 +22,7 @@ export {
   Houses,
   Recognition,
   Health,
-  Announcement,
+  News,
   Initiatives,
   Clubs,
   Contact,

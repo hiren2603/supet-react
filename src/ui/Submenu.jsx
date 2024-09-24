@@ -3,7 +3,7 @@ import React from "react";
 function Submenu({ children, open, close }) {
   return (
     <div
-      className={`absolute left-0 top-[130%] w-[400px] bg-primary text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
+      className={`absolute left-0 top-[150%] w-[280px] bg-primary text-white shadow-md overflow-hidden transition-all duration-300 ease-in-out ${
         open ? "h-max" : "max-h-0"
       }`}
       onClick={close}

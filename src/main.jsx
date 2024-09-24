@@ -3,11 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "@/ui/Layout";
-// import Home  from '@/pages/Home/Home.jsx'
-// import About from './pages/About/About.jsx'
-// import School from './pages/School/School.jsx'
-// import Hostels from './pages/Hostels/Hostels.jsx'
-// import SportsGym from './pages/SportsGym/SportsGym.jsx'
+
 import {
   Home,
   About,
@@ -20,7 +16,7 @@ import {
   Health,
   Clubs,
   Initiatives,
-  Announcement,
+  News,
   Contact,
 } from "@/pages";
 
@@ -72,7 +68,7 @@ const router = createBrowserRouter([
             element: <Houses />,
           },
           {
-            path: "programs/recognition",
+            path: "programs/recognition-awards",
             element: <Recognition />,
           },
           {
@@ -86,8 +82,8 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/announcement",
-        element: <Announcement />,
+        path: "/news",
+        element: <News />,
       },
       {
         path: "/contact",
